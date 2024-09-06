@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الدكتور زيد</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>الدكتور زيد</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>حساب مؤشر كتلة الجسم (BMI)</h2>
+            <form id="bmiForm">
+                <label for="bmiWeight">الوزن (كغم):</label>
+                <input type="number" id="bmiWeight" required>
+                <label for="bmiHeight">الطول (سم):</label>
+                <input type="number" id="bmiHeight" required>
+                <button type="submit">احسب</button>
+            </form>
+            <div id="bmiResult"></div>
+            <canvas id="bmiChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>حساب السعرات الحرارية اليومية</h2>
+            <form id="caloriesForm">
+                <label for="caloriesWeight">الوزن (كغم):</label>
+                <input type="number" id="caloriesWeight" required>
+                <label for="caloriesHeight">الطول (سم):</label>
+                <input type="number" id="caloriesHeight" required>
+                <label for="caloriesAge">العمر:</label>
+                <input type="number" id="caloriesAge" required>
+                <label for="caloriesActivity">مستوى النشاط:</label>
+                <select id="caloriesActivity" required>
+                    <option value="1.2">غير نشط</option>
+                    <option value="1.375">نشاط خفيف</option>
+                    <option value="1.55">نشاط معتدل</option>
+                    <option value="1.725">نشاط عالي</option>
+                    <option value="1.9">نشاط شديد</option>
+                </select>
+                <button type="submit">احسب</button>
+            </form>
+            <div id="caloriesResult"></div>
+            <canvas id="caloriesChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>حساب نسبة الدهون في الجسم</h2>
+            <form id="bodyFatForm">
+                <label for="bodyFatWeight">الوزن (كغم):</label>
+                <input type="number" id="bodyFatWeight" required>
+                <label for="bodyFatHeight">الطول (سم):</label>
+                <input type="number" id="bodyFatHeight" required>
+                <label for="bodyFatAge">العمر:</label>
+                <input type="number" id="bodyFatAge" required>
+                <label for="bodyFatGender">الجنس:</label>
+                <select id="bodyFatGender" required>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                </select>
+                <button type="submit">احسب</button>
+            </form>
+            <div id="bodyFatResult"></div>
+            <canvas id="bodyFatChart" width="400" height="200"></canvas>
+        </div>
+
+        <div class="card">
+            <h2>اقتراحات غذائية</h2>
+            <form id="nutritionForm">
+                <label for="nutritionWeight">الوزن (كغم):</label>
+                <input type="number" id="nutritionWeight" required>
+                <label for="nutritionHeight">الطول (سم):</label>
+                <input type="number" id="nutritionHeight" required>
+                <label for="nutritionAge">العمر:</label>
+                <input type="number" id="nutritionAge" required>
+                <label for="nutritionGender">الجنس:</label>
+                <select id="nutritionGender" required>
+                    <option value="male">ذكر</option>
+                    <option value="female">أنثى</option>
+                </select>
+                <button type="submit">احصل على اقتراحات</button>
+            </form>
+            <div id="nutritionSuggestions"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
